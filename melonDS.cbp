@@ -155,6 +155,7 @@
 		<Unit filename="src/WifiAP.cpp" />
 		<Unit filename="src/WifiAP.h" />
 		<Unit filename="src/fltk_sdl/main.cpp" />
+		<Unit filename="src/fltk_sdl/main.h" />
 		<Unit filename="src/libui_sdl/DlgAudioSettings.cpp" />
 		<Unit filename="src/libui_sdl/DlgAudioSettings.h" />
 		<Unit filename="src/libui_sdl/DlgEmuSettings.cpp" />

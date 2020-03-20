@@ -16,45 +16,14 @@
     with melonDS. If not, see http://www.gnu.org/licenses/.
 */
 
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-#include <string.h>
+#ifndef MAIN_H
+#define MAIN_H
 
-#include <FL/Fl.h>
-#include <FL/Fl_Window.h>
-
-#include "main.h"
-
-#include "../version.h"
-
-
-MainWindow::MainWindow(int w, int h)
-    : Fl_Window(w, h, "melonDS FLTK")
+class MainWindow : public Fl_Window
 {
-    //
-}
+public:
+    MainWindow(int w, int h);
+    ~MainWindow();
+};
 
-MainWindow::~MainWindow()
-{
-    // heh
-}
-
-
-int main(int argc, char** argv)
-{
-    srand(time(NULL));
-
-    printf("melonDS " MELONDS_VERSION "\n");
-    printf(MELONDS_URL "\n");
-
-    printf("welcome to the fancypants FLTK version\n");
-    printf("also Arisotura is a lazy fuck\n");
-
-    Fl_Window* win = new MainWindow(256, 384);
-
-    win->end();
-    win->show(argc, argv);
-
-    return Fl::run();
-}
+#endif // MAIN_H
