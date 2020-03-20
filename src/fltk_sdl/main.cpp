@@ -23,6 +23,8 @@
 
 #include <FL/Fl.h>
 #include <FL/Fl_Window.h>
+#include <FL/Fl_Menu.h>
+#include <FL/Fl_Menu_Bar.h>
 
 #include "main.h"
 
@@ -32,12 +34,31 @@
 MainWindow::MainWindow(int w, int h)
     : Fl_Window(w, h, "melonDS FLTK")
 {
-    //
+    Fl_Menu_Bar* mb = new Fl_Menu_Bar(0, 0, w, 30);
+
+    Fl_Menu_Item menu[] =
+    {
+        {"File", 0, NULL, NULL, FL_SUBMENU},
+            {"Open ROM...", 0, NULL, NULL, FL_MENU_DIVIDER},
+            {"Quit",        0, OnQuit, this, 0},
+            {0},
+
+        {0}
+    };
+
+    mb->copy(menu);
+    add(mb);
 }
 
 MainWindow::~MainWindow()
 {
     // heh
+}
+
+void MainWindow::OnQuit(Fl_Widget* w, void* _win)
+{
+    Fl_Window* win = (Fl_Window*)_win;
+    win->hide();
 }
 
 
@@ -50,6 +71,8 @@ int main(int argc, char** argv)
 
     printf("welcome to the fancypants FLTK version\n");
     printf("also Arisotura is a lazy fuck\n");
+
+    //Fl::scheme("plastic");
 
     Fl_Window* win = new MainWindow(256, 384);
 

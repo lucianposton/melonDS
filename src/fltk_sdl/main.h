@@ -24,6 +24,8 @@ class MainWindow : public Fl_Window
 public:
     MainWindow(int w, int h);
     ~MainWindow();
+
+    static void OnQuit(Fl_Widget* w, void* blarg);
 };
 
 #endif // MAIN_H
