@@ -2678,7 +2678,7 @@ void RecreateMainWindow(bool opengl)
 }
 
 
-int main(int argc, char** argv)
+int __main(int argc, char** argv)
 {
     srand(time(NULL));
 
@@ -3030,7 +3030,7 @@ int main(int argc, char** argv)
 
 #include <windows.h>
 
-int CALLBACK WinMain(HINSTANCE hinst, HINSTANCE hprev, LPSTR cmdline, int cmdshow)
+int CALLBACK __WinMain(HINSTANCE hinst, HINSTANCE hprev, LPSTR cmdline, int cmdshow)
 {
     int argc = 0;
     wchar_t** argv_w = CommandLineToArgvW(GetCommandLineW(), &argc);
@@ -3053,7 +3053,7 @@ int CALLBACK WinMain(HINSTANCE hinst, HINSTANCE hprev, LPSTR cmdline, int cmdsho
         printf("\n");
     }
 
-    int ret = main(argc, argv);
+    int ret = __main(argc, argv);
 
     printf("\n\n>");
 

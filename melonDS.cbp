@@ -80,6 +80,7 @@
 		</Compiler>
 		<Linker>
 			<Add library="SDL2" />
+			<Add library="fltk" />
 			<Add library="shell32" />
 			<Add library="comctl32" />
 			<Add library="comdlg32" />
@@ -153,6 +154,7 @@
 		<Unit filename="src/Wifi.h" />
 		<Unit filename="src/WifiAP.cpp" />
 		<Unit filename="src/WifiAP.h" />
+		<Unit filename="src/fltk_sdl/main.cpp" />
 		<Unit filename="src/libui_sdl/DlgAudioSettings.cpp" />
 		<Unit filename="src/libui_sdl/DlgAudioSettings.h" />
 		<Unit filename="src/libui_sdl/DlgEmuSettings.cpp" />
