@@ -21,6 +21,9 @@
 #include <stdio.h>
 #include <string.h>
 
+#include <FL/Fl.h>
+#include <FL/Fl_Window.h>
+
 #include "../version.h"
 
 
@@ -34,5 +37,10 @@ int main(int argc, char** argv)
     printf("welcome to the fancypants FLTK version\n");
     printf("also Arisotura is a lazy fuck\n");
 
-    return 0;
+    Fl_Window* win = new Fl_Window(256, 384, "melonDS FANCYPANTS FLTK VERSION");
+
+    win->end();
+    win->show(argc, argv);
+
+    return Fl::run();
 }
